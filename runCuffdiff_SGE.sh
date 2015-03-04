@@ -20,4 +20,4 @@ module load Cufflinks/2.2.1-goolf-1.4.10
 
 cd $INPUT_ROOT
 cuffmerge -p 8 -g $ENSEMBL_GTF -s $REFERENCE assemblies.txt
-cuffdiff -p 8 -b $REFERENCE -L GNP,GC -u merged_asm/merged.gtf $TOPHAT_DIR$GC2,$TOPHAT_DIR$GC3 $TOPHAT_DIR$GNP2,$TOPHAT_DIR$GNP3
+cuffdiff -p 8 -b $REFERENCE -L GNP,GC -u merged_asm/merged.gtf $TOPHAT_DIR$GNP2,$TOPHAT_DIR$GNP3 $TOPHAT_DIR$GC2,$TOPHAT_DIR$GC3
