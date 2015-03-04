@@ -31,15 +31,15 @@ TOPHAT_DIR="/ohri/projects/vanderhyden/picketts2015/analysis/tophat/$SAMPLE"
 CUFFLINKS_DIR="/ohri/projects/vanderhyden/picketts2015/analysis/cufflinks/$SAMPLE"
 
 
-### Uses module to load programs
-module load Bowtie2
-module load Bowtie
-module load TopHat
+### Uses module to load programs (proper version and compiler chain)
+module load Bowtie2/2.2.4-goolf-1.4.10
+module load Bowtie/1.1.1-goolf-1.4.10
+module load TopHat/2.0.12-goolf-1.4.10
 
 cd $INPUT_ROOT
 tophat -p 8 -G $ENSEMBL_GTF -o $TOPHAT_DIR $BOWTIE_INDEX $INPUT
 
-module load Cufflinks
+module load Cufflinks/2.2.1-goolf-1.4.10
 cufflinks -p 8 -o $CUFFLINKS_DIR -u $TOPHAT_DIR/accepted_hits.bam
 
 ### Makes small file with directions to transcript.gtf from each analysis. Used by cufflinks later
