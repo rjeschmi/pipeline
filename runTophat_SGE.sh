@@ -35,10 +35,11 @@ CUFFLINKS_DIR="/ohri/projects/vanderhyden/picketts2015/analysis/cufflinks/$SAMPL
 module load Bowtie2
 module load Bowtie
 module load TopHat
-module load Cufflinks
 
 cd $INPUT_ROOT
 tophat -p 8 -G $ENSEMBL_GTF -o $TOPHAT_DIR $BOWTIE_INDEX $INPUT
+
+module load Cufflinks
 cufflinks -p 8 -o $CUFFLINKS_DIR -u $TOPHAT_DIR/accepted_hits.bam
 
 ### Makes small file with directions to transcript.gtf from each analysis. Used by cufflinks later
