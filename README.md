@@ -6,7 +6,7 @@ This repository contains various scripts for data analysis/visualization at vari
 
 We welcome any contributions to improve the efficiency and functionality of these scripts
 
-_SGE scripts are template submission scripts for the sun grid engine job scheduler used for the Perkins lab compute cluster
+_SGE scripts are template submission scripts for the sun grid engine job scheduler used for the OHRI Bioinformatics Core Facility compute cluster
 
 
 
